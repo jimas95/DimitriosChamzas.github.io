@@ -1,0 +1,469 @@
+ <!-- Modal 1 -->
+ <div class="portfolio-modal modal fade modal-xl" id="project1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Recycler Baxter - Work in Progress</h3>
+                <h4 class="text-center">ROS  |  Python  |  Computer Vision  |  Motion Planning  |  Inverse Kinematics  |  OpenCV  |  MoveIt</h4>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p></p>
+                <h4>This is an ongoing project. Here is a little teaser:</h4> 
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Baxter/Baxter.gif" class="img-responsive" alt="The Baxter in action" style="width:80%"></p>
+                <p class="text-center">The Baxter in action</p>    
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Baxter/Baxter_sorting.gif" class="img-responsive" alt="Sorting bottles and cans"></p>
+                <p class="text-center">Sorting bottles and cans</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Baxter/realsense.png" class="img-responsive" alt="Recognizing and classifying bottles and cans" style="width:80%">
+                <p class="text-center">Recognizing and classifying bottles and cans</p>  
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Baxter/CV.gif" class="img-responsive" alt="Recognizing and classifying bottles and cans" style="width:80%"></p>
+                <p class="text-center">Recognizing and classifying bottles and cans</p>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <!-- <p></p>
+                    <form action="https://github.com/YaelBenShalom" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form> -->
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="portfolio-modal modal fade modal-xl" id="project2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Mobile Manipulation</h3>
+                <h4 class="text-center">ROS  |  Python  |  Omnidirectional Robot  |  Robotic Manipulation  |  Motion Planning  |  PI controller</h4>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Description</h3>       
+                <p>In this project, I wrote a software that plans a trajectory for the end-effector of the YouBot mobile manipulator, performs odometry as the chassis moves, and performs feedback control to drive the youBot to pick up a block at a specified location, carry it to a desired location, and put it down in the V-REP simulation softwarw.</p>
+                <p>The YouBot is an omnidirectional mobile robot with a 5-DOF robotic arm, simulated in CoppeliaSim simulation software.</p>
+                <p></p>
+                <h3>Overview</h3>       
+                <p>The projects covers the following topics:</p>
+                <p></p>
+                <h4 style="font-size:20px">Generating the Kinematics Simulator of the YouBot</h4> 
+                <p>In this part of the projects, I wrote a code that compute the next configuration of the robot, given the current robot configuration (Chassis phi, Chassis x, Chassis y, J1, J2, J3, J4, J5, W1, W2, W3, W4, Gripper), joints and wheels speed and the time step.</p>
+                <p></p>
+                <h4 style="font-size:20px">Plannig the End-Effector's Trajectory</h4> 
+                <p>In this part of the projects, I wrote a code that generates a reference trajectory for the robot's end-effector, given the end-effector configuration in different states, relative to the world or the cube frame.</p>
+                <p></p>
+                <h4 style="font-size:20px">Applying Feedback Control to Drive the Robot in the Desired Trajectory</h4> 
+                <p>In this part of the projects, I wrote a code that returns the commanded end-effector twist and the error of each joint, given the current, desired and next end-effector configurations and the PI control gains.
+                    <br>The feedback control of the the mobile manipulator is given by kinematic task-space feedforward plus feedback control law:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Manipulation/control_law.png" class="img-responsive" alt="Motion planning for different cube positions" style="width:70%"></p>
+                <p></p>
+                <h3>Results</h3>
+                <h4 style="font-size:20px">Motion Planning with Different Initial and Final Cube Position</h4> 
+                <p>In this part, I simulated the the controlled motion with different initial and final cube position, and different initial robot's configuration.</p>
+                <p>Here are two motion planning and control simulations for different cube positions:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Manipulation/best_fast.gif" class="img-responsive" alt="Motion planning for different cube positions" style="width:80%"></p>
+                <p class="text-center">Initial position (1, 0, 0), Final position (0, -1, pi/2)</p>
+                <p></p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Manipulation/newTask_fast.gif" class="img-responsive" alt="Motion planning for different cube positions" style="width:80%"></p>
+                <p class="text-center">Initial position (1, 1, 0), Final position (1, -1, pi/2)</p>
+                <p></p>
+                <h4 style="font-size:20px">Motion Planning with Different Control Gains</h4> 
+                <p>In this part, I plotted the end-effector's twist error as a function of time, to explore the error's behavior when using different control gains.</p>
+                <p>Here are two motion planning and control simulations for different control gains:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Manipulation/Xerr,kp=20,ki=5.png" class="img-responsive" alt="Motion planning for different cube positions" style="width:80%"></p>
+                <p class="text-center">kp=20, ki=5 - Controlled motion</p>
+                <p></p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/Manipulation/Xerr,kp=2,ki=40.png" class="img-responsive" alt="Motion planning for different cube positions" style="width:80%"></p>
+                <p class="text-center">kp=2, ki=40 - Overshoot motion</p>
+                <p></p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p></p>
+                    <form action="https://github.com/YaelBenShalom/Mobile-Manipulation" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form>
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="portfolio-modal modal fade modal-xl" id="project3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Robot Navigation and Control</h3>
+                <h4 class="text-center">Python  |  Autonomous Vehicle  |  Artificial Intelligence  |  Motion Planning  |  Path Planning  |  Arduino</h4>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Description</h3>       
+                <p>In this project, I build a wheeled robot and programmed it to navigate autonomously through a series of tasks,
+                    Using Arduino, motors, encoders and distance sensors.</p>
+                <p></p>
+                <h3>Goal</h3>       
+                <p>The main goal was to successfully pass a series of tasks in an obsticle course, as fast as possible.</p>
+                <h4 style="font-size:20px">The Tasks:</h3>  
+                <p>  
+                  <ol style="font-size:16px">
+                    <li>Navigating through a maze (Maze navigation and explotarion)</li>
+                    <li>Driving through changing-slope path, keeping constant roll</li>
+                    <li>Following curved wall, keeping constant distance from it</li>
+                    <li>Driving on a changing-gradient slope, keeping constant speed</li>
+                    <li>Locating and reaching the finish line flag</li>
+                  </ol>  
+                </p>
+                <p></p>
+                <h3>System Description</h3>
+                <p>I used several components to control the robot motion:
+                  <ul style="font-size:16px">  
+                    <li>Arduino</li>
+                    <dl>
+                        <li>Motors & encoders:</li>
+                        <dd>- PMW motor and encoder - One on each rear wheel to activate and control the motion</dd>
+                        <dd>- Servo motor - Located on the front of the vehicle and used to rotate the TOF sensor to desired scanning angle</dd>
+                    <dl>
+                        <li>Sensors</li>
+                        <dd>- IR sensor - One on each side of the vehicle to measure side distance</dd>
+                        <dd>- TOF (Time of Flight) sensor - Assembled on the servo motor to scan the surrounding space</dd>
+                        <dd>- US (ultrasonik) sensor - Located on the top of the vehicle to measure distance from objects above the vehicle</dd>
+                        <dd>- IMU 9250 (9 DOF) - Measures orientation (Gyroscope) and acceleration (Accelerometer). Compass is not in use</dd>
+                    <li>Led matrix - Indicates mission number and mission success/fail</li>
+                  </ul> 
+                </p>
+                <br>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/mechatronics/system_explanation.png" alt="The system" style="width:75%"></p>
+                <p class="text-center">The system</p>
+                <br>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/mechatronics/vehicle.jpg" alt="The vehicle" style="width:75%"></p>
+                <p class="text-center">The vehicle</p>
+                <br>
+                <div class="row no-gutter">
+                    <div class="col-lg-4 col-sm-6">
+                      <img src="img/portfolio/mechatronics/task1.jpg" alt="Task 1 - maze" style="width:100%">
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="img/portfolio/mechatronics/task2.jpg" alt="Task 2 - changing-slope" style="width:100%">
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="img/portfolio/mechatronics/task3.jpg" alt="Task 3 - following curved wall" style="width:100%">
+                    </div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-lg-4 col-sm-6">
+                      <img src="img/portfolio/mechatronics/obstacle_course.jpg" alt="The obstacle course" style="width:100%">
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="img/portfolio/mechatronics/programming.jpg" alt="Programming" style="width:100%">
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <img src="img/portfolio/mechatronics/vehicle2.jpg" alt="Mission number indication" style="width:100%">
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p></p>
+                    <form action="https://github.com/YaelBenShalom/Autonomous-Robot-Navigation-and-Control" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form>
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="portfolio-modal modal fade modal-xl" id="project4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Rapidly-Exploring Random Tree (RRT)</h3>
+                <h4 class="text-center">Python  |  Artificial Intelligence  |  Path Planning</h4>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Description</h3>       
+                <p>A Rapidly-Exploring Random Tree (RRT) is a fundamental path planning algorithm in robotics.
+                    <br>In This project, I implemented RRT exploration algorithm in a two-dimensional domain.</p>
+                <p></p>
+                <h3>Goal</h3>       
+                <p>Use the RRT algorithm to find the goal coordinate in a two-dimensional domain, while avoiding obstacles.</p>
+                <p></p>
+                <h3>Overview</h3>
+                <p>The pseudocode for the implementation:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/RRT/RRT-pseudocode.png" alt="pseudocode" style="width:50%"></p>
+                <p class="text-center">The implementation pseudocode</p>
+                <p></p>
+                <h4 style="font-size:20px">Simple RRT</h4> 
+                <p>In this part I implemented a simple RRT algorithm in 2D with the domain of [0,100]×[0,100] and incremental distance of 1.
+                    <br>The program coverages uniformly over the whole space.</p>
+                <p>The following figure shows the algorithm implementation after 500 iterations:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/RRT/Task_1.png" alt="Simple RRT" style="width:80%"></p>
+                <p class="text-center">Simple RRT</p>
+                <p></p>
+                <h4 style="font-size:22px">Planning a Path with Obstacles</h4> 
+                <p>In this part I implemented an RRT algorithm with obstacles.
+                    <br>The path planning algorithm checks the path for collisions and avoids the round obstacles.</p>
+                <p>The following figure shows the algorithm implementation after 500 iterations:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/RRT/Task_2.png" alt="RRT with obstacles" style="width:80%"></p>
+                <p class="text-center">RRT with obstacles</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p></p>
+                    <form action="https://github.com/YaelBenShalom/RRT-Challenge" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form>
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="portfolio-modal modal fade modal-xl" id="project5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Robotic Arm Control Using Computer Vision Perception?</h3>
+                <h4 class="text-center">ROS  |  Python  |  Robotic Manipulation  |  Motion Planning  |   Computer Vision  |  Range Imaging</h4>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p></p>
+                <h3>Description</h3>       
+                <p>In This project, I used computer vision and motion planning to control a robotic arm to "steal" a pen from my hand and throw it on the floor.</p>
+                <p>This project contains 2 parts:</p>
+                <ol style="font-size:16px">
+                    <li>A computer vision algorithm for recognizing the 3D location of a purple pen, using a D435i depth-camera.
+                        <br>The software recognize the pen by its color, and locate its coordinate using the 3D camera.</li>
+                    <li>Controlling a PincherX robotic arm to accurately seize the pen under varying conditions, and throw it on the floor.</li>
+                </ol>
+                <p></p>
+                <h3>Overview</h3>
+                <h4 style="font-size:20px">Part 1 - Pen Recognition</h4> 
+                <p>In this part, I used computer vision packages (cv2) to analyze a video in order to find a purple pen.
+                    <br> Then, I used the Realsense 3D camera to locate the pen's coordinates.</p>
+                <p>The following video is a demostration of the pen recognition, where the left image is the color frame and the right image is the equivalent depth frame, as captured from the Realsense camera:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/pen_recognition/pen-recognition.gif" class="img-responsive" alt="Pen recognition" style="width:80%"></p>
+                <p class="text-center">Pen recognition</p>
+                <p></p>
+                <h4 style="font-size:20px">Part 2 - Pen Stealing</h4> 
+                <p>In this part, I used the interbotix motion and control packages to move the arm to a specified coordinates and steal the pen.</p>
+                <p>The arm motion can be split to 4 parts:</p>
+                <ol style="font-size:16px">
+                    <li>Move the arm to the specified coordinates with an open gripper. The coordinates of the pen found using the pen recognition on part 1</li>
+                    <li>Close the gripper on the pen</li>
+                    <li>Move the arm to a location above the floor</li>
+                    <li>Open the gripper and release the pen on the floor</li>
+                </ol>
+                <p>The following video is a demostration of the pen seizing:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/pen_recognition/pen-stealing.gif" class="img-responsive" alt="Pen stealing" style="width:80%"></p>
+                <p class="text-center">Pen stealing</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p></p>
+                    <form action="https://github.com/YaelBenShalom/Who-Stole-My-Pen-Challenge" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form>
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="portfolio-modal modal fade modal-xl" id="project6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Maze Implementation and Exploration</h3>
+                <h4 class="text-center">Python  |  Path Planning</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Description</h3>       
+                <p>In this project, me and my team created a maze exploration software.
+                    <br>In the maze, a simulated robotic agent takes discrete steps on a grid in the maze, while trying to navigate to a goal.</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/maze/maze.gif" class="img-responsive" alt="Solving 31x11 maze" style="width:100%"></p>
+                <p class="text-center">Solving 31x11 maze</p>
+                <h3>Goals</h3>       
+                <p>The goal of this project is to generate a random maze (sized according to users choise), and solve it for a simulated robotic agent.</p>
+                <p></p>
+                <h3>Overview</h3>
+                <h4 style="font-size:20px">Core Tasks</h4> 
+                <ol style="font-size:16px">
+                    <li>Maze generation</li>
+                    <li>Maze state</li>
+                    <li>Solve the maze</li>
+                    <li>Display the maze</li>
+                    <li>Maze interface</li>
+                </ol>
+                <p></p>
+                <h4 style="font-size:20px">Maze generation</h4> 
+                <p>Generate a maze by implementing the randomized Prim's maze generation algorithm.
+                    <br>The pseudocode for this algorithm:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/maze/pseudocode.png" class="img-responsive" alt="Maze generation pseudocode" style="width:70%"></p>
+                    <p class="text-center">Maze generation pseudocode</p>
+                <p></p>
+                <h4 style="font-size:20px">Maze state</h4> 
+                <p>Track the state of the maze and determine if a grid square is wall/free, or is it the goal/start point
+                    <br>Be able to find the 1-hop and 2-hop neighbors of a cell (for maze generation and exploration).</p>
+                <p></p>
+                <h4 style="font-size:20px">Solve the maze</h4> 
+                <p>Implementat the "Wavefront Planner" maze solving algorithms.
+                    <br>The pseudocode for Wavefront Planner algorithm:</p>
+                <ol style="font-size:16px">
+                    <li>Breadth-first search approach</li>
+                    <li>Start at the goal</li>
+                    <li>Advance one square in every direction and mark with a 1</li>
+                    <li>From each 1, advance to every open square and mark with a 2</li>
+                    <li>From each n-1 square advance to every open square and mark with an n</li>
+                    <li>Stop when there are no more squares to explore</li>
+                    <li>From any starting point, move to the adjacent cell with the lowest number</li>
+                    <li>Stop at the goal</li>
+                </ol>   
+                <p>The algorithm finds the shortest path to a given goal from every starting point, but it requires full knowledge of the maze.</p>
+                <p></p>
+                <h4 style="font-size:20px">Maze interface and display</h4> 
+                <p>Display the maze's walls, free cells, start position, and goal position.
+                    <br>Display the robot position as it moves.</p>         
+                <p></p>    
+                <p>In the following video, the software generates and solves a 20x13 maze:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/maze/maze2.gif" class="img-responsive" alt="Solving 20x13 maze" style="width:80%"></p>
+                <p class="text-center">Solving 20x13 maze</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p></p>
+                    <form action="https://github.com/YaelBenShalom/Python_a-Maze-ing_Challenge" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form>
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 7 -->
+<div class="portfolio-modal modal fade modal-xl" id="project7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="text-center modal-title">Jack-in-a-Box Dynamic Simulation</h3>
+                <h4 class="text-center">Python  |  Dynamics Simulation</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Description</h3>       
+                <p>In this project, I simulated and animated the dynamics of a planar jack-in-a-box system. 
+                    <br>The simulation forecast the dynamic of the multi-body system in time, while the bodies experiance multiple impacts between each other (impacts between the jack's masses and the box’s walls).</p>
+                <p></p>
+                <h3>Overview</h3>       
+                <p>The dynamic system includes 2 rigid bodies - A squared box and a 4-mass jack, as shown below.
+                    <br>On the two bodies acts external forces and gravity, that causes them to move and impact each other. The jack falls down with gravity, while on the box acts an equal and opposite force to gravity that keeps it in it's place. On the box also acts a sinusoidal torque that makes it rotate back and forth in a constant frequency.</p>
+                <p>In order to keep track of the position of the bodies through the simulation, I defined a series of sub-frame for every mass in the system that portray the location of the mass relative to the system's main frame.
+                    <br>The following drawing shown the different frames in the system:
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/dynamic_simulation/final-projects - frames.jpg" class="img-responsive" alt="Dynamic simulation" style="width:80%"></p>
+                <p class="text-center">Jack-in-a-box - System model</p>
+                <p>To simulate the system, I used the Euler-Lagrange equations and the impact laws.
+                    <br>There are total of 16 possible impact scenarios (anyone of the jack's masses can impact anyone of the box's walls), and the model can simulates every impact possible.
+                    <br>All of the impacts in this system are ideal elastic impacts.</p>
+                <p>You can see the final result in the following short video:</p>
+                <p class="text-center">
+                    <img class="center" src="img/portfolio/dynamic_simulation/ME314-final-project.gif" class="img-responsive" alt="Dynamic simulation" style="width:60%"></p>
+                <p class="text-center">Jack-in-a-box - System animation</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p></p>
+                    <form action="https://github.com/YaelBenShalom/Simulating-Jack-in-a-Box" method="get" target="_blank">
+                        <button type="submit" class="btn btn-primary">Check Project on Github</button>
+                     </form>
+                     <p></p>
+                    <button type="button" class="btn btn-primary center" data-dismiss="modal">Close Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
