@@ -1,13 +1,13 @@
 # Site settings
-title:              Yael Ben Shalom - Portfolio
+title:              Dimitrios Chamzas - Portfolio
 email:              yael.bshalom@gmail.com
-description:        "Yael Ben Shalom - Portfolio"
+description:        "Dimitris Chamzas - Portfolio"
 url:                "http://localhost:4000"
-baseurl:            /YaelBenShalom.github.io
+baseurl:            /DimitriosChamzas.github.io
 
-github_username: YaelBenShalom
-LinkedIn_username: Yael Ben Shalom
-facebook_username: Yael Ben Shalom
+github_username: jimas95
+LinkedIn_username: Dimitris Chamzas
+facebook_username: Dimitris Chamzas
 
 # File structure settings
 image_path:         /public/images
